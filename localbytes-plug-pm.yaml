@@ -80,7 +80,7 @@ ota:
 
 # This should point to the public location of this yaml file.
 dashboard_import:
-  package_import_url: github://LocalBytes/esphome-localbytes-plug/localbytes-plug-pm.yaml@main
+  package_import_url: github://awensaunders/esphome-localbytes-plug/localbytes-plug-pm.yaml@main
 
 wifi:
   # Factory calibration network
