@@ -16,6 +16,9 @@ substitutions:
   # This is done at compilation time by adding `-s ap_timout 5s`, but the default should really be 1m (as it is in esphome)
   ap_timeout: "60s"
 
+  # Update interval for the power monitoring.
+  update_interval: "6s" 
+
 esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
@@ -298,7 +301,7 @@ sensor:
     cf_pin: GPIO4
     cf1_pin: GPIO5
     change_mode_every: 3
-    update_interval: 6s
+    update_interval: "${update_interval}"
     
     voltage:
       name: "Voltage"
