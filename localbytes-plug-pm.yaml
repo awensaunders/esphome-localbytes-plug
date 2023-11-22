@@ -399,3 +399,11 @@ light:
   - platform: binary
     output: state_led
     id: led
+
+# This will nuke everything in the flash. Obviously the values hardcoded into
+# the firmware will stay the same, so it won't reset wifi if it's been adopted
+# (but will if it's only been configured with the captive portal). Any other
+# similar configs will also persist, but the calibration values won't.
+button:
+  - platform: factory_reset
+    name: Restart with Factory Default Settings
