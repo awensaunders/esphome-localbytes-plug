@@ -17,19 +17,22 @@ substitutions:
   ap_timeout: "60s"
 
   # Update interval for the power monitoring.
-  update_interval: "6s" 
+  update_interval: "6s"
+
   # This is the initial value for the voltage calibration factor. It will be
   # changed when the calibration is run, or can be updated manually in Home
   # Assistant.
-  voltage_calibration_initial: "0.300"
+  voltage_calibration_initial: "0.6524"
   # This is the initial value for the power calibration factor. It will be
   # changed when the calibration is run, or can be updated manually in Home
   # Assistant.
-  power_calibration_initial: "0.133"
+
+  power_calibration_initial: "0.6487"
   # This is the initial value for the current calibration factor. It will be
   # changed when the calibration is run, or can be updated manually in Home
   # Assistant.
-  current_calibration_initial: "0.805"
+
+  current_calibration_initial: "0.8711"
 
 esphome:
   name: "${name}"
