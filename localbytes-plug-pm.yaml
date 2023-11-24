@@ -295,6 +295,8 @@ sensor:
   # Power Monitoring
   - platform: hlw8012
     id: power_monitor
+    # According to the spec sheet this is the model used in the localbytes plug. I have not verified this.
+    model: BL0937
     sel_pin:
       number: GPIO12
       inverted: true
