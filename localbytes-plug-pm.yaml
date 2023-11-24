@@ -18,6 +18,18 @@ substitutions:
 
   # Update interval for the power monitoring.
   update_interval: "6s" 
+  # This is the initial value for the voltage calibration factor. It will be
+  # changed when the calibration is run, or can be updated manually in Home
+  # Assistant.
+  voltage_calibration_initial: "0.300"
+  # This is the initial value for the power calibration factor. It will be
+  # changed when the calibration is run, or can be updated manually in Home
+  # Assistant.
+  power_calibration_initial: "0.133"
+  # This is the initial value for the current calibration factor. It will be
+  # changed when the calibration is run, or can be updated manually in Home
+  # Assistant.
+  current_calibration_initial: "0.805"
 
 esphome:
   name: "${name}"
@@ -140,17 +152,17 @@ globals:
   - id: voltage_multiply
     type: float
     restore_value: true
-    initial_value: "0.3"
+    initial_value: "${voltage_calibration_initial}"
     
   - id: power_multiply 
     type: float
     restore_value: true
-    initial_value: "0.133"
+    initial_value: "${power_calibration_initial}"
     
   - id: current_multiply 
     type: float
     restore_value: true
-    initial_value: "0.805"
+    initial_value: "${current_calibration_initial}"
   
 binary_sensor:
   # Push Button (Toggles Relay When Pressed)
